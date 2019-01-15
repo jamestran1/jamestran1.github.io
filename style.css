@@ -1,0 +1,352 @@
+body {
+    margin:0;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 15px;
+    color: black;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left: 0;
+    z-index:999;
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #fff;
+    background: rgba(60, 60, 60, 0.4);
+    height:70px;
+  }
+  
+  header h1 {
+    text-transform:uppercase;
+    margin-left: 50px;
+  }
+  
+  #navbar {
+    align-self:center;
+  }
+  
+  #navbar ul {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  #navbar ul li{
+    list-style:none;
+    display: inline;
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 550;
+    padding: 0px 20px;
+  }
+  
+  #navbar ul li a:hover {
+    color: #a82049;
+  }
+  
+  main {
+    margin-top: 0px;
+  }
+  
+  section#welcome-section {
+    height: 100vh;
+    text-align:center;
+  }
+  
+  section#welcome-section img {
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  
+  section#welcome-section h1 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  
+  section#welcome-section p {
+    font-size: 1.3em;
+  }
+  
+  section#welcome-section div {
+    position:absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    background: rgba(60, 60, 60, 0.3);
+  }
+  
+  section#about, section#projects,
+  section#blog, section#contact {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 50px;
+  }
+  
+  section#about {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+  }
+  
+  section#about h1:before,
+  section#blog h1:before,
+  section#contact h1:before{
+      content:"";
+      display:block;
+      height:70px;
+      margin:-30px 0 0;
+      flex: 0 0 100%;
+  }
+  
+  section#about h1{
+    flex: 0 0 100%;
+  }
+  
+  section#about h1, section#blog h1, section#contact h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #3a85f5;
+  }
+  
+  section#about p {
+    flex: 0 0 48%;
+  }
+  
+  section#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  section#projects:before{
+      content:"";
+      display:block;
+      height:100px;
+      margin:-30px 0 0;
+      flex: 0 0 100%;
+  }
+  
+  article.project {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 270px;
+    text-align:center;
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  
+  article.project:hover, article.blog:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  article.project h2{
+    color:#a82049;
+  }
+  .project img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .project p {
+    text-align: justify;
+  }
+  
+  section#clients {
+    margin-top: 50px;
+    height: 300px;
+    background-image: url('https://images.unsplash.com/photo-1519397154350-533cea5b8bff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  
+  section#clients .client {
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: 0px 100px;
+    align-content:space-between;
+    text-align: center;
+  }
+  
+  .client i {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+  }
+  
+  .client span {
+    font-size: 1.7em;
+    margin-top: 20px;
+  }
+  
+  section#blog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between
+  }
+  
+  section#blog h1, section#contact h1 {
+    flex: 0 0 100%;  
+  }
+  
+  article.blog {
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  article.blog img {
+    width: 100%;
+  }
+  
+  span.author {
+    color: gray;
+  }
+  
+  article.blog time {
+    float: right;
+    font-style: italic;
+  }
+  
+  article.blog h2 {
+    color: #a82049;
+  }
+  
+  section#contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  section#contact div, section#contact form {
+    width: 48%;
+    display:flex;
+    flex-direction:column;
+  }
+  
+  section#contact form {
+    flex-wrap: wrap;
+    flex-direction:row;
+    padding: 0px 1px;
+    justify-content: space-between;
+    margin: 0px 0px 0px 20px;
+  }
+  
+  section#contact form input,
+  section#contact form textarea {
+    border: none;
+    border-bottom: 1px solid #a82049;
+    margin-bottom: 20px;
+    font-size:1em;
+  }
+  
+  section#contact form input {
+    width: 47%;
+  }
+  
+  section#contact form input:focus,
+  section#contact form textarea:focus {
+    outline:none;
+  }
+  
+  section#contact form textarea {
+    flex: 0 0 100%;
+  }
+  
+  section#contact form button {
+    width: 100px;
+    height: 40px;
+    background-color: #a82049;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+  
+  section#contact div{
+    font-size: 1em;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  
+  section#contact span {
+    font-weight: 550;
+    padding: 5px;
+  }
+  
+  footer {
+    background-color: hsl(340, 10%, 20%);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-top: 30px;
+  }
+  
+  footer section.footer{
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+  }
+  
+  footer section.footer li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  footer section ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+  }
+  
+  footer section ul li a:visited{  
+    color: white;
+  }
+  
+  footer hr {
+    flex: 0 0 95%;
+  }
+  
+  footer > p {
+    width: 100%;
+    text-align:center;
+  }
+  
+  @media screen and (max-width:1135px)
+  {
+    article.project, article.blog {
+      width: 400px;
+    }
+    
+    .project img, .blog img {
+      width: 350px;
+      height: 350px;
+    }
+  }
